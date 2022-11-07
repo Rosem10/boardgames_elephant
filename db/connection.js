@@ -9,7 +9,7 @@ if (!process.env.PGDATABASE) {
   throw new Error("PGDATABASE not set");
 }
 
-const pool = new Pool({ connectionString: DATABASE_URL });
+const pool = new Pool({ connectionString: process.env.PGDATABASE });
 
 module.exports = pool;
 
