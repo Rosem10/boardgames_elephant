@@ -9,7 +9,7 @@ if (!process.env.PGDATABASE) {
   throw new Error("PGDATABASE not set");
 }
 
-const pool = new Pool({ connectionString: process.env.PGDATABASE });
+const pool = new Pool({ connectionString: "postgres://mxrclprs:752f0WB2soOwCRvYUIUe7T9aqXRxu9Sr@mouse.db.elephantsql.com/mxrclprs" });
 
 module.exports = pool;
 
