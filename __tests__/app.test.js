@@ -6,7 +6,7 @@ const request = require("supertest");
 
 require("jest-sorted");
 
-afterAll(() => db.end());
+afterAll(() => {db.end()});
 
 beforeEach(() => seed(testData));
 
