@@ -1,4 +1,4 @@
-const db = require("../db");
+const db = require("../db/server");
 
 const fetchReviewById = (id) => {
   const queryStr = `SELECT reviews.*, COUNT(comments.*)::INT AS comment_count 
