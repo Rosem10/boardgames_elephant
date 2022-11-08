@@ -16,13 +16,13 @@ const config =
 
 
 const pool = new Pool(config);
-pool.connect(function(err) {
-  if (err) {
-    return console.error('could not connect to postgres', err);
-  } else { 
-    console.log('all goodo')
-  }
-});
+// pool.connect(function(err) {
+//   if (err) {
+//     return console.error('could not connect to postgres', err);
+//   } else { 
+//     console.log('all goodo')
+//   }
+// });
 
 
 module.exports = pool
