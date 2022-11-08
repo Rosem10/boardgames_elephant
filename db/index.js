@@ -1,15 +1,14 @@
-const { Pool } = require("pg");
-const ENV = process.env.NODE_ENV || "development";
+const pg = require('pg');
 
-require("dotenv").config({
-  path: `${__dirname}/../.env.${ENV}`,
+var conString = "postgres://uswxctwx:EfppvI1HJmQq8GFxdtRmbYvogl3glesv@surus.db.elephantsql.com/uswxctwx" //Can be found in the Details page
+var pool = new pg.Pool({connectionString: conString});
+pool.connect(function(err) {
+  if (err) {
+    return console.error('could not connect to postgres', err);
+  } else { 
+    console.log('all goodo')
+  }
 });
 
-if (!process.env.PGDATABASE) {
-  throw new Error("PGDATABASE not set");
-}
 
-const pool = new Pool({ connectionString: process.env.PGDATABASE });
-
-module.exports = pool;
-
+module.exports = pool
