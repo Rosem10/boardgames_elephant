@@ -2,7 +2,6 @@
   "name": "be-nc-games",
   "version": "1.0.0",
   "description": "bc-nc-games",
-  "main": "index.js",
   "scripts": {
     "setup-dbs": "psql -f ./db/setup.sql",
     "seed-prod": "NODE_ENV=production npm run seed",
