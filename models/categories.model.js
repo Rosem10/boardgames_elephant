@@ -1,4 +1,4 @@
-const db = require("../db/server");
+const db = require("../db");
 
 const fetchCategories = () => {
   const queryStr = `SELECT * FROM categories`;

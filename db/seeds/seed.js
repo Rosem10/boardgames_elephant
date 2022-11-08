@@ -1,4 +1,4 @@
-const db = require("../server");
+const db = require("..");
 const format = require("pg-format");
 const {
 	convertTimestampToDate,
