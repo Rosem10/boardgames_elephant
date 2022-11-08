@@ -1,4 +1,4 @@
-const {Pool} = require('pg');
+const { Pool } = require('pg');
 
 var conString = "postgres://uswxctwx:EfppvI1HJmQq8GFxdtRmbYvogl3glesv@surus.db.elephantsql.com/uswxctwx" //Can be found in the Details page
 var pool = new Pool({connectionString: conString});
